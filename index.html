@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection Playground — Glassmorphism Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="glass-bg"></div>
+    <div class="app-container">
+        <header class="app-header">
+            <div class="logo-row">
+                <span class="logo-emoji">🎯</span>
+                <div class="title-col">
+                    <h1>SQL Injection Playground</h1>
+                    <p class="tagline">Interactive database sandbox teaching how parameterization prevents SQLi hacks.</p>
+                </div>
+            </div>
+            <div class="badge">security</div>
+        </header>
+
+        <main class="workspace-card">
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                <div>
+                    <div class="pane-header">Unsafe Query Console</div>
+                    <input type="text" id="sqli-unsafe" value="' OR '1'='1" style="width: 100%; margin-bottom: 12px;">
+                    <button class="btn" onclick="runUnsafe()">Execute Unsafe Query</button>
+                    <pre id="sqli-unsafe-out" class="out-box" style="margin-top: 12px;"></pre>
+                </div>
+                <div>
+                    <div class="pane-header">Safe Parameterized Console</div>
+                    <input type="text" id="sqli-safe" value="' OR '1'='1" style="width: 100%; margin-bottom: 12px;">
+                    <button class="btn btn-secondary" onclick="runSafe()">Execute Safe Query</button>
+                    <pre id="sqli-safe-out" class="out-box" style="margin-top: 12px;"></pre>
+                </div>
+            </div>
+        
+        </main>
+        
+        <footer class="app-footer">
+            <p>Created as a premium portfolio piece by <a href="https://github.com/VARSHAN69" target="_blank">@VARSHAN69</a></p>
+        </footer>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
