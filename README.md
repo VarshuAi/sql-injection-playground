@@ -38,7 +38,7 @@ version: 1.0
 type: Repository
 author: VarshuAi
 description: >
-  Interactive database sandbox teaching how parameterization prevents SQLi hacks.
+  name: sql-injection-playground version: 1.0 type: Repository author: VarshuAi description: >   Interactive database sandbox teaching how parameterization prevents SQLi hacks. primary_tech: CSS
 primary_tech: CSS
 ```
 
